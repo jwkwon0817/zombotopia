@@ -35,3 +35,13 @@ async def create_ranking(ranking: RankingModel, db: Session = Depends(get_db)) -
         return SuccessSchema()
     except Exception as e:
         return ErrorSchema(message=str(e))
+
+@router.delete('/{user_id}')
+async def delete_ranking(user_id: str, db: Session = Depends(get_db)) -> SuccessSchema | ErrorSchema:
+    try:
+        ranking_service = RankingService(db)
+        ranking_service.delete_ranking(user_id)
+
+        return SuccessSchema()
+    except Exception as e:
+        return ErrorSchema(message=str(e))
