@@ -8,8 +8,8 @@ jobs:
    deploy:
       runs-on: self-hosted
       defaults:
-      run:
-         working-directory: /home/sunrintoday/projects/zombotopia
+         run:
+            working-directory: /home/sunrintoday/projects/zombotopia
 
       steps:
          - name: Pull latest changes
