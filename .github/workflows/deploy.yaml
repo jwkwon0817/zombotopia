@@ -10,11 +10,11 @@ on:
 
             steps:
                - name: Go to project directory
-                  run: cd /home/sunrintoday/projects/zombotopia
+                 run: cd /home/sunrintoday/projects/zombotopia
                - name: Pull latest changes
-                  run: git pull origin main
+                 run: git pull origin main
                               
                - name: Restart Docker containers
-                  run: |
-                     docker compose down api
-                     docker compose up -d --build api
+                 run: |
+                   docker compose down api
+                   docker compose up -d --build api
