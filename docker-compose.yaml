@@ -10,8 +10,6 @@ services:
       - sqlite_data:/app/data
     environment:
       - DATABASE_URL=sqlite:///data/zombotopia.db
-    networks:
-      - zombotopia-network
     depends_on:
       - db
 
@@ -19,12 +17,6 @@ services:
     image: keinos/sqlite3
     volumes:
       - sqlite_data:/data
-    networks:
-      - zombotopia-network
 
 volumes:
   sqlite_data:
-
-networks:
-  zombotopia-network:
-    driver: bridge
