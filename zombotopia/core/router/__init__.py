@@ -6,6 +6,6 @@ router = APIRouter()
 
 @router.get('/test')
 def test():
-    return {"message": "Test"}
+    return {"message": "Test dfasdfsdaf"}
 
 router.include_router(ranking_router, prefix="/ranking", tags=["ranking"])
