@@ -9,10 +9,7 @@ jobs:
       runs-on: self-hosted
       steps:
          - uses: actions/checkout@v3
-         - name: Pull latest changes
-           run: git pull origin main
-                        
          - name: Restart Docker containers
            run: |
-             docker compose down api
-             docker compose up -d --build api
+             docker compose down
+             docker compose up -d --build
